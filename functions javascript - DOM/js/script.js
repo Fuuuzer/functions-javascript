@@ -11,7 +11,7 @@ function mudarTexto() {
 
 // 2. Mudar valores com o .innerHTML
 function mudarTexto2(){
-  document.getElementById('texto2').innerHTML = "Texto 2";
+  document.getElementById('texto2').innerHTML = "você";
 }
 
 // 3. Mudar imagem 
@@ -47,3 +47,68 @@ function mostrarDataHora(){
     document.getElementById('hora').innerHTML = Date();
 }
 
+// 7. Alterar texto ao tirar o foco
+function alterarTexto(){
+  const textoInformado = document.getElementById('nome');
+  textoInformado.value = textoInformado.value.toUpperCase();
+  textoInformado.style.border = "solid 2px red";
+
+  // document.getElementById('nome').value = document.getElementById('nome').value.toUpperCase();
+}
+
+// 8. Passar o mouse sobre
+function passarMouse(objeto){
+  objeto.innerHTML = "Obrigado!";
+    objeto.style.backgroundColor = "#59a6d3";
+        objeto.style.transition = "500ms";
+
+}
+
+function tirarMouse(objeto){
+  objeto.innerHTML = "passe o mouse";
+    objeto.style.backgroundColor = "#f9f9f9";
+      objeto.style.transition = "1500ms"
+
+}
+
+// 9. Clicar, segurar e soltar
+  function clicar(elemento){
+    elemento.innerHTML = "Solte!";
+    elemento.style.backgroundColor = "#2e3c5e";
+    elemento.style.transition = "0.5s";
+}
+
+function soltar(elemento){
+  elemento.innerHTML = "Clicar!";
+  elemento.style.backgroundColor = "#d94a38"
+  elemento.style.transition = "0.5s";
+}
+
+// Atributo (variável) Global 
+let contador = 1;
+
+
+// 10. Cobntador de cliques
+function contadorClique(){
+// contador++;
+// contador += 5;
+contador *= 5;
+
+// Atualiza o display
+document.querySelector('.display').value = contador;
+
+
+// ---------------------------!!!-------------------------------
+/*var valor = parseInt (document.querySelector('.display').value);
+
+ valor = valor + 1;
+valor++; //o mesmo que o comando de cima
+
+document.querySelector('.display').value = valor;*/
+// ---------------------------!!!-------------------------------
+}
+
+function zerarContador(){
+  contador = 1;
+  document.querySelector('.display').value = contador;
+}

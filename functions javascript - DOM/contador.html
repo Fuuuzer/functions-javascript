@@ -16,16 +16,19 @@
 <body>
 
   <div class="container">
-
-    <h3>Mudar imagem</h3>
-
-    <p>
-      <img id="img01" src="img/minecraft_icone.png" alt="minecraft">
-    </p>
+    <h3>Contador de cliques</h3>
 
     <p>
-      <button ondblclick="mudarImagem()">Mudar Imagem</button>
+      <input type="text" class="display" disabled value="1">
     </p>
+
+    <button class="btn" onclick="contadorClique()">
+      Incrementar contador
+    </button>
+
+    <button class="btn" onclick="zerarContador()">
+      Zerar contador
+    </button>
   </div>
 
   <script src="js/script.js"></script>

@@ -16,16 +16,11 @@
 <body>
 
   <div class="container">
+    <h3>Alterar texto ao tirar o foco</h3>
 
-    <h3>Mudar imagem</h3>
+    <label for="nome">Informe o nome</label>
+    <input type="text" id="nome" onblur="alterarTexto()">
 
-    <p>
-      <img id="img01" src="img/minecraft_icone.png" alt="minecraft">
-    </p>
-
-    <p>
-      <button ondblclick="mudarImagem()">Mudar Imagem</button>
-    </p>
   </div>
 
   <script src="js/script.js"></script>
